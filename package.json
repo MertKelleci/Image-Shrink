@@ -1,0 +1,28 @@
+{
+  "name": "image-shrink",
+  "productName": "ImageShrink",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon --exec electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=app/assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=app/assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ImageShrink\"",    
+    "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=app/assets/icons/png/1024x1024.png --prune=true --out=release-builds"
+  },
+  "author": "Mert KELLECİ",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^19.0.6",
+    "electron-log": "^4.4.8",
+    "imagemin": "7",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "nodemon": "^2.0.18",
+    "slash": "3"
+  },
+  "devDependencies": {
+    "electron-packager": "^15.5.1"
+  }
+}
